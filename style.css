@@ -1,0 +1,15 @@
+.menu_card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.card_description{
+        display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 8px;
+}
