@@ -7,9 +7,12 @@
     border-radius: 10px;
 }
 
+.main_menu{
+    max-width: 800px;
+
+}
 .card_description{
-        display: flex;
-    /* justify-content: center; */
+    display: flex;
     align-items: center;
     gap: 8px;
 }
@@ -18,4 +21,17 @@
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.card_price{
+    width: 70px;
+}
+
+footer {
+  color: black;
+  width:100%;
+  padding:0;
+  clear:both;
+  bottom:0;
+  position: absolute;    
 }
