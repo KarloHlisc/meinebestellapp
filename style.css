@@ -34,4 +34,9 @@ footer {
   clear:both;
   bottom:0;
   position: absolute;    
+  height: 20px;
+}
+
+.d-none{
+    display: none;
 }
