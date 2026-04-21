@@ -38,7 +38,7 @@ function renderMenuList(index) {
                 </div>
                 <div class="card_price">
                     <p class="item_price">${thisDish.price.toFixed(2).replace(".", ",")} €</p>
-                    <button class="add_item" onclick="addToCart(${thisDish.id})">Add</button>
+                    <button class="add_item" id="add_item${index}" onclick="addToCart(${thisDish.id})">Add</button>
                 </div>
             </div> 
         `;
@@ -51,9 +51,17 @@ function addToCart(id) {
   dish.amount++;
   if (!shoppingCart.includes(dish)) {
     shoppingCart.push(dish);
+/**
+    for(index=0; index < dishes.length;index++){
+      let addButton = document.getElementById(`add_item${index}`);
+       console.log(addButton);
+      addButton.innerHTML=-`Added ${dish.amount}`;
+    }
+       */
   }
   renderShoppingCartDesktop();
   renderShoppingCartMobile();
+  calculateAmountItems();
 }
 
 function getAddedDish(id) {
@@ -72,13 +80,14 @@ function getAddedDish(id) {
 function removeFromCart(id) {
   let dish = getAddedDish(id);
   dish.amount--;
-  if (dish.amount < 1) {
-    shoppingCart.pop(dish);
-  } else if (!shoppingCart.includes(dish)) {
-    shoppingCart.push(dish);
-  }
+   if (dish.amount < 1) {
+        shoppingCart.pop(dish);
+     } else if (!shoppingCart.includes(dish)) {
+        shoppingCart.push(dish);
+   }
   renderShoppingCartDesktop();
   renderShoppingCartMobile();
+   
 }
 
 function renderShoppingCartDesktop() {
@@ -92,13 +101,60 @@ function renderShoppingCartDesktop() {
 
     shoppingCartDesktop.innerHTML += `
                 <div>
-                    ${dish.amount}x ${dish.name} - ${price.toFixed(2).replace(".", ",")} €
+                    <span id="dishAmount${i}">${dish.amount}x ${dish.name} - ${price.toFixed(2).replace(".", ",")} € </span>
                     <button onclick="removeFromCart(${dish.id})">➖</button>
                     <button onclick="addToCart(${dish.id})">➕</button>   
                 </div>
                `;
+               
+  calculateAmountItems();
   }
 }
+
+function calculateAmountItems(){
+  let amountNumber = document.getElementById("shoppingSum");
+  amountNumber.innerHTML="";
+  let total = 0;
+     for (let i = 0; i < shoppingCart.length; i++) {
+         const dish = shoppingCart[i];
+    
+          total += dish.price * dish.amount;
+     }
+    amountNumber.innerHTML=`<div>
+    
+    <span><b>Total: ${total.toFixed(2).replace(".",",")} €</b></span>
+    </div>`;
+     
+    
+}
+/**
+function addDeliveryFee() {
+   let delivery =0;
+  for (let i = 0; i < shoppingCart.length; i++) {
+    const dish = shoppingCart[i];
+
+    if(!delivery){
+      delivery = 3.99;
+       total += dish.price * dish.amount + delivery; 
+       console.log(total);
+       
+    }
+    else{
+      delivery = 0;
+       total += dish.price * dish.amount + delivery; 
+       console.log(total);
+    }
+}
+    let delivery = 3.99;
+    if(delivery){
+      let deliverFee = total + delivery;
+      console.log(deliverFee);
+      
+    }
+    <span>Delivery: ${delivery.toFixed(2).replace(".",",")} €</span><br>
+}
+ */
+
 
 function renderShoppingCartMobile() {
   let shoppingCartMobile = document.getElementById("shoppingCartMobile");
