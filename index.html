@@ -1,49 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="db.js"></script>
     <script src="script.js"></script>
-</head>
-<body onload="init()">
+  </head>
+  <body onload="init()">
     <header>
-    <section class="header_section">
+      <section class="header_section">
         <div class="header">
-            <img src="" alt="logo bestell app">
-            <nav>
-                <a href="#">Nav</a>
-                <button> navi</button>
-            </nav>
+          <img src="" alt="logo bestell app" />
+          <nav>
+            <a href="#">Nav</a>
+            <button>navi</button>
+          </nav>
         </div>
         <div class="main_image">
-            <img src="" alt="Restoraunt main image" class="background_image">
-            <img src="" alt="logo na slici" class="logo_onto_bg_image">
+          <img src="" alt="Restoraunt main image" class="background_image" />
+          <img src="" alt="logo na slici" class="logo_onto_bg_image" />
         </div>
         <div class="title">
-            <h1>Bestell Application</h1>
-            <span>Bescreibung des Restourants</span>
+          <h1>Bestell Application</h1>
+          <span>Bescreibung des Restourants</span>
         </div>
-    </section>
+      </section>
     </header>
     <main>
-    <section class="main_menu" id="main_menu">
+      <section class="main_menu" id="main_menu"></section>
+      <section id="shopingCards">
         
-    </section>
-    <section id="shopingCards">
-        <button onclick="clickAndDeliver()">Lieferung</button>
-         <button onclick="clickAndCollect()">Abholung</button>
-         <div id="shoppingCartDesktop"></div>
-         <div id="shoppingCartMobile" class="d-none"></div>
-         <div id="shoppingSum" ></div>
-    </section>
+        <div id="shoppingCartDesktop"></div>
+        <div id="shoppingCartMobile" class="d-none"></div>
+        <div id="shoppingSum"></div>
+      </section>
     </main>
     <footer>
-        <div>
-            <span>Burger Laden</span>
-        </div>
+      <div>
+        <span>Burger Laden footer</span>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
