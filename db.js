@@ -39,7 +39,7 @@ let dishes = [
     ]
   },
   {
-    "category": "Burger",
+    "category": "Burger & Sandwiches",
     "icon":"./assets/icons/burger_sandwich_icon.svg",
     "menues": [
       {
