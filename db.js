@@ -1,147 +1,152 @@
 let dishes = [
-  {
-    "category": "Pizza",
+  { 
+    "category": "Pizza (30cm)",
+    "icon":"./assets/icons/pizza_icon.svg",
     "menues": [
       {
-         "id": 1,
+        "id": 1,
         "name": "Margerita",
-        "description": "Tomatensauce, Mozzarella, Oregano",
-        "picture": "./assets/img/margerita_Pizza.jpg",
-        "price": 6.75,
+        "description": "Tomato Sauce, Mozzarella",
+        "picture": "./assets/img/pizza/margherita.jpg",
+        "price": 11.90,
+        "amount": 0
+      },
+      
+      {
+        "id": 2,
+        "name": "Chorizo",
+        "description": "Tomato slices, Mozzarella and Chorizo",
+        "picture": "./assets/img/pizza/chorizo.jpg",
+        "price": 13.90,
         "amount": 0
       },
       {
-         "id":2,
-        "name": "Salami",
-        "description": "Tomatensauce, Oregano, Salami, Zwiebeln",
-        "picture": "./assets/img/salami_Pizza.jpg",
-        "price": 8.75,
-        "amount": 0
-      },
-       {
-         "id": 3,
-        "name": "Napoli",
-        "description": "mit Oliven, Sardellen und Kapern",
-        "picture": "./assets/img/margerita_Pizza.jpg",
-        "price": 14.50,
+        "id": 3,
+        "name": "Funghi",
+        "description": "Red onion, Olives, Button Mushrooms, Mozzarella",
+        "picture": "./assets/img/pizza/funghi.jpg",
+        "price": 12.90,
         "amount": 0
       },
       {
-         "id": 4,
-        "name": "Capricciosa",
-        "description": "mit Schinken, Egerlingen, Artischocken, Peperoni und Oliven",
-        "picture": "./assets/img/salami_Pizza.jpg",
-        "price": 14.90,
+        "id": 4,
+        "name": "Quattro Formaggi with Chicken ",
+        "description": "Chicken, Mozzarella, Gorgonzola, Fontina,  Parmigiano Reggiano",
+        "picture": "./assets/img/pizza/quattro_formaggi.jpg",
+        "price": 15.90,
         "amount": 0
       }
     ]
   },
   {
     "category": "Burger",
+    "icon":"./assets/icons/burger_sandwich_icon.svg",
     "menues": [
       {
-         "id": 5,
-        "name": "Hamburger",
-        "description": "Beschreibung Hamburger",
-        "picture": "./assets/img/hamburger.jpg",
-        "price": 6.75,
+        "id": 5,
+        "name": "Veggie mushroom black burger",
+        "description": "Mixed green salad, Tomatoes, Edamame, Mushrooms",
+        "picture": "./assets/img/burgers/veggie_mushroom.jpg",
+        "price": 16.90,
         "amount": 0
       },
       {
-         "id": 6,
-        "name": "Cheeseburger",
+        "id": 6,
+        "name": "All meat burger",
         "description": "Beef, doppelt Cheddar, Salat, Tomate, Gurke, Burger Sauce, Ketchup im veganen Brioche Bun",
-        "picture": "./assets/img/cheeseburger.jpg",
-        "price": 19.75,
+        "picture": "./assets/img/burgers/all_meat.jpg",
+        "price": 15.90,
         "amount": 0
       },
       {
-         "id": 7,
-        "name": "Classic Smash",
+        "id": 7,
+        "name": "Beef red burger",
         "description": "Beef (well done), doppelt Cheddar, rote Zwiebel, Gurke, Ketchup, Sweet Honey Mustard im veganen Brioche Bun",
-        "picture": "./assets/img/hamburger.jpg",
-        "price": 11.75,
+        "picture": "./assets/img/burgers/beff_red.jpg",
+        "price": 14.90,
         "amount": 0
       },
       {
-         "id": 8,
-        "name": "BBQ",
-        "description": "Beef, Bacon, Röstzwiebel, Smoky BBQ Sauce, doppelt Cheddar, Salat, Tomate, Gurke im veganen Brioche Bun",
-        "picture": "./assets/img/cheeseburger.jpg",
-        "price": 14.90,
+        "id": 8,
+        "name": "Big chicken burger",
+        "description": "Chicken, Cheese, Tomatoes, Lettuce, Onion, Bell pepper",
+        "picture": "./assets/img/burgers/big_chicken.jpg",
+        "price": 15.90,
         "amount": 0
-      }  
+      }
     ]
   },
-   {
-    "category": "Salat",
+  {
+    "category": "Salad",
+    "icon":"./assets/icons/salad_icon.svg",
     "menues": [
       {
-         "id": 9,
-        "name": "Isalata Nizza",
-        "description": "Verschiedene Rohkost, Blattsalat, Thunfisch, gekochtes Ei, Rote Zwiebeln, Oliven, Kapern, Balsamicodressing",
-        "picture": "./assets/img/hamburger.jpg",
+        "id": 9,
+        "name": "Warm beef arugula salad",
+        "description": "Beef, Arugula, Field salad, Greek feta, Cherry tomatoes, Sun-dried Tomatoes, Balsamic-vinegar dressing",
+        "picture": "./assets/img/salad/beff_arugula.jpg",
+        "price": 16.90,
+        "amount": 0
+      },
+      {
+        "id": 10,
+        "name": "Mini green Salad",
+        "description": "Green salad, Cucumber, Carrots, Parsley, Radishes ",
+        "picture": "./assets/img/salad/mini_green.jpg",
+        "price": 7.90,
+        "amount": 0
+      },
+      {
+        "id": 11,
+        "name": "Green Salad with sea food",
+        "description": "Mixed greens, Cherry tomatoes, Red onion, Mussels, Squid rings, Shrimp, Dijon mustard-lemon dressing with dill",
+        "picture": "./assets/img/salad/sea_food.jpg",
+        "price": 16.90,
+        "amount": 0
+      },
+      {
+        "id": 12,
+        "name": "Vegan green salad with tofu",
+        "description": "Green salad, Cherry tomatoes, Cucumber, Baby spinach, Edamame, Radishes, Bittercress, Tofu, Peanuts",
+        "picture": "./assets/img/salad/vegan_tofu.jpg",
         "price": 14.90,
-        "amount": 0
-      },
-      {
-         "id": 10,
-        "name": "Insalata rucola i pomodorini",
-        "description": "Rucola, Strauchtomaten, Grana Padana Parmigiano",
-        "picture": "./assets/img/cheeseburger.jpg",
-        "price": 6.90,
-        "amount": 0
-      },
-       {
-         "id": 11,
-        "name": "Ceasar Salad",
-        "description": "Romanasalat, gehobelter Parmesan, geröstete Croutons, Cherrytomaten und Ceasar-Dressing",
-        "picture": "./assets/img/hamburger.jpg",
-        "price": 12.90,
-        "amount": 0
-      },
-      {
-         "id": 12,
-        "name": "Hirtenkäse Salat",
-        "description": "mit Hirtenkäse, gemischtem Salat, Tomate, Karotten, Gurken und Mais",
-        "picture": "./assets/img/cheeseburger.jpg",
-        "price": 9.90,
         "amount": 0
       },
     ]
   },
-   {
+  {
     "category": "Getränke",
+    "icon":"./assets/icons/salad_icon.svg",
     "menues": [
       {
-         "id": 13,
+        "id": 13,
         "name": "Coca-Cola 1,0l",
-        "description": "Coca-Cola steht für einzigartigen Geschmack, Erfrischung und Momente voller Lebensfreude",
-        "picture": "./assets/img/hamburger.jpg",
-        "price": 3.65,
+        "description": "Zutaten: Wasser, Zucker, Kohlensäure, natürliches Aroma, Aroma Koffein",
+        "picture": "./assets/img/getranke/coca-cola.webp",
+        "price": 3.75,
         "amount": 0
       },
       {
-         "id": 14,
-        "name": "Sprite 0,5l",
-        "description": "Bist du bereit für Sprite? Die einzigartige Formel aus grünen Limetten und sonnengelben Zitronen erfrischt dich maximal.",
-        "picture": "./assets/img/cheeseburger.jpg",
-        "price": 2.75,
-        "amount": 0
-      },
-       {
-         "id": 15,
-        "name": "Adelholzener ACE 0,5l",
-        "description": "Mit Süßungsmittel(n)",
-        "picture": "./assets/img/hamburger.jpg",
+        "id": 14,
+        "name": "Fanta 1,0l",
+        "description": "Zutaten: Wasser, Zucker, Orangensaft aus Orangensaftkonzentrat, Kohlensäure",
+        "picture": "./assets/img/getranke/fanta.webp",
         "price": 2.75,
         "amount": 0
       },
       {
-         "id": 16,
-        "name": "Mezzo Mix 0,5l",
-        "description": "Mixt euch eine gute Zeit mit Mezzo Mix, dem erfrischend-leckeren Kuss aus Cola und Orange.",
-        "picture": "./assets/img/cheeseburger.jpg",
+        "id": 15,
+        "name": "Adelholzener Classic 0,5l (MEHRWEG)",
+        "description": "Mineralwasser mit Kohlensäure",
+        "picture": "./assets/img/getranke/adelholzner.webp",
+        "price": 3.55,
+        "amount": 0
+      },
+      {
+        "id": 16,
+        "name": "fritz-kola® superzero 0,33l (MEHRWEG)",
+        "description": "Wenn Zero, dann SuperZero: Intensiver Fritz-Kola-Geschmack, volles Koffein, null Zucker",
+        "picture": "./assets/img/getranke/fritz-cola.webp",
         "price": 2.75,
         "amount": 0
       }

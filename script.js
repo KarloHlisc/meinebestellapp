@@ -110,10 +110,7 @@ function renderShoppingCartDesktop() {
 
     total += dish.price * dish.amount;
   }
-  amountNumber.innerHTML = `<div>
-    
-    <span><b>Total: ${total.toFixed(2).replace(".", ",")} €</b></span>
-    </div>`;
+  amountNumber.innerHTML = `<div><span><b>Total: ${total.toFixed(2).replace(".", ",")} €</b></span></div>`;
 }
 
 function renderShoppingCartMobile() {

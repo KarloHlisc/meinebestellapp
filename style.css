@@ -1,101 +1,94 @@
-html{
-    scroll-behavior: smooth;
-    height: 100%;
+html {
+  scroll-behavior: smooth;
+  height: 100%;
 }
 
-body{
-    margin: 0;
-     display:flex;
-    flex-direction: column;
-    min-height: 100dvh;
-    width: 100%;
-    
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  width: 100%;
 }
 
-
-
-.menu_card{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid;
-    border-radius: 10px;
+.menu_card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid;
+  border-radius: 10px;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    top:0;
-    right: 0;
-    height: 64px;
-    padding: 24px 42px 24px 80px;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 64px;
+  padding: 24px 42px 24px 80px;
 }
-main{
-    display: flex;
-    flex: 1;
-}
-
-.main_menu{
-    max-width: 1440px;
+main {
+  display: flex;
+  flex: 1;
 }
 
-
-.card_description{
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.main_menu {
+  max-width: 1440px;
 }
 
-.category_name{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: orange;
+.card_description {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.card_price{
-    width: 70px;
+.category_name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: orange;
+}
+
+.card_price {
+  width: 70px;
 }
 
 footer {
-    display: flex;
+  display: flex;
   color: black;
-  width:100%;
-  padding:0;
-  clear:both;
-  bottom:0;
-  position: absolute;    
+  width: 100%;
+  padding: 0;
+  clear: both;
+  bottom: 0;
+  position: absolute;
   height: 20px;
   background-color: orange;
 }
 
-.d-none{
-    display: none;
+.d-none {
+  display: none;
 }
 
-.menu_card{
-
-    background-color: rgb(211, 209, 204);
-    max-width: 800px;
-    margin: 8px;
+.menu_card {
+  background-color: rgb(211, 209, 204);
+  max-width: 800px;
+  margin: 8px;
 }
 
-#shopingCards{
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-    width: 300px;
+#shopingCards {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 300px;
 }
 
-
-@media screen and (max-width: 500px){
-    .category_name{
+@media screen and (max-width: 500px) {
+  .category_name {
     background-color: orange;
     width: 100%;
-}
-
+  }
 }
