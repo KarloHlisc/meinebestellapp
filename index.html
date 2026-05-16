@@ -1,46 +1,52 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="db.js"></script>
-    <script src="script.js"></script>
-  </head>
-  <body onload="init()">
-    <header>
-      <section class="header_section">
-        <div class="header">
-          <img src="" alt="logo bestell app" />
-          <nav>
-            <a href="#">Nav</a>
-            <button>navi</button>
-          </nav>
-        </div>
-        <div class="main_image">
-          <img src="" alt="Restoraunt main image" class="background_image" />
-          <img src="" alt="logo na slici" class="logo_onto_bg_image" />
-        </div>
-        <div class="title">
-          <h1>Bestell Application</h1>
-          <span>Bescreibung des Restourants</span>
-        </div>
-      </section>
-    </header>
-    <main>
-      <section class="main_menu" id="main_menu"></section>
-      <section id="shopingCards">
-        
-        <div id="shoppingCartDesktop"></div>
-        <div id="shoppingCartMobile" class="d-none"></div>
-        <div id="shoppingSum"></div>
-      </section>
-    </main>
-    <footer>
-      <div>
-        <span>Burger Laden footer</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="db.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body onload="init()">
+  <header>
+    <div class="header-section">
+      <img src="./assets/icons/logo_bestellapp.svg" alt="logo bestell app" />
+    </div>
+    <div>
+      <a href="#"><img src="./assets/icons/burger_menu.svg" alt="burger menu"></a>
+    </div>
+  </header>
+  <main>
+    <section class="title-bestellapp">
+      <div class="main-image">
+        <!--  <img src="" alt="Restoraunt main image" class="background-image" />-->
       </div>
-    </footer>
-  </body>
+      <div class="restoraunt-title">
+        <div class="title">
+          <h1><span>Burger</span>House</h1> <img src="./assets/icons/frame_star.svg" alt="logo na slici"
+            class="logo-onto-bg-image" />
+        </div>
+        <div class="title-description"><span>The best of Burgers, Pizza, and Greens, all in one great place.</span></div>
+      </div>
+
+    </section>
+    <section class="main-menu" id="main-menu"></section>
+    <section id="shopingCards">
+
+      <div id="shoppingCartDesktop"></div>
+      <div id="shoppingCartMobile" class="d-none"></div>
+      <div id="shoppingSum"></div>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <span>Burger Laden footer</span>
+    </div>
+  </footer>
+</body>
+
 </html>
