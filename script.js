@@ -8,8 +8,6 @@ function renderCategoryDishes() {
   let categoryDish = document.getElementById("main-menu");
   categoryDish.innerHTML = "";
 
-
-
   for (let index = 0; index < dishes.length; index++) {
     let dishName = dishes[index];
     categoryDish.innerHTML += `
@@ -33,15 +31,14 @@ function renderMenuList(index) {
     let thisDish = elementN.menues[dish];
     menuList += `
                 <div class="menu-card">
-                <div class="card-description-img">
-                    <img src="${thisDish.picture}" alt="${thisDish.name}" class="card-image">
-                    
-                </div>
-                <div class="card-description-text">
+                  <div class="card-description-img">
+                    <img src="${thisDish.picture}" alt="${thisDish.name}" class="card-image"> 
+                  </div>
+                  <div class="card-description-text">
                     <h3>${thisDish.name}</h3>
                     <p class="item_description">${thisDish.description}</p>
                     </div>
-                <div class="card-price">
+                  <div class="card-price">
                     <p class="item-price">${thisDish.price.toFixed(2).replace(".", ",")} €</p>
                     <a class="add-item" id="add-item${index}" onclick="addToCart(${thisDish.id})">Add to basket</a>
                 </div>
@@ -90,7 +87,7 @@ function removeFromCart(id) {
   renderShoppingCartMobile();
 }
 
-function renderShoppingCartDesktop() {
+function renderShoppingCartDesktop(id) {
   let shoppingCartDesktop = document.getElementById("shoppingCartDesktop");
   shoppingCartDesktop.innerHTML = "";
 
@@ -104,20 +101,39 @@ function renderShoppingCartDesktop() {
     let price = dish.price * dish.amount;
 
     shoppingCartDesktop.innerHTML += `
-                <div>
-                    <span id="dishAmount${i}">${dish.amount}x ${dish.name} - ${price.toFixed(2).replace(".", ",")} € </span>
+                <div class="basket-item">
+                    <span id="dishAmount${i}">${dish.amount} x ${dish.name}</span>
                   <div class="dish-amount-counter">
-                    <a onclick="removeFromCart(${dish.id})"><img src="./assets/icons/minus.svg"></a>
-                    ${dish.amount}<a onclick="addToCart(${dish.id})"><img src="./assets/icons/plus.svg"></a>   
-                  </div>
+                    <div>
+                        <a onclick="removeFromCart(${dish.id})"><img src="${changeDeleteIcon(id)}"></a>
+                    <span>${dish.amount}</span>
+                    <a onclick="addToCart(${dish.id})"><img src="./assets/icons/plus.svg"></a>   
+                    </div>
+                    <span>${price.toFixed(2).replace(".", ",")} € </span>
+                    </div>
                 </div>
                 `;
     subtotal += dish.price * dish.amount;
   }
   let totalDelivery = subtotal + 4.99;
-  amountNumber.innerHTML = `<div><span><b>Subtotal: ${subtotal.toFixed(2).replace(".", ",")} €</b></span>
-  <br><span><b>Delivery fee: 4,99 €</b></span><br>
-  <span><b>Total: ${totalDelivery.toFixed(2).replace(".", ",")} €</b></span></div>`;
+  amountNumber.innerHTML = `<div class="basket-price-final-count">
+                  <div class="subtotal-price">
+                        <span><b>Subtotal</span>
+                        <span> ${subtotal.toFixed(2).replace(".", ",")} €</b></span>
+                  </div>    
+                  <div class="delivery-fee-price"> 
+                        <span><b>Delivery fee</span> 
+                        <span> 4,99 €</b></span>
+                  </div>
+                  <div class="border-total-top"></div>
+                  <div class="total-price">
+                        <span><b>Total</span> 
+                        <span> ${totalDelivery.toFixed(2).replace(".", ",")} €</b></span>
+                  </div>
+                  <div class="btn-buy">
+                    <a onclick=""> Buy now (${totalDelivery.toFixed(2).replace(".", ",")}€)</a>
+                  </div>
+        </div>`;
 }
 
 function renderShoppingCartMobile() {
@@ -128,12 +144,29 @@ function renderShoppingCartMobile() {
     const dish = shoppingCart[i];
     const price = dish.price * dish.amount;
     shoppingCartMobile.innerHTML += `
-                <div>
-                    ${dish.amount}x ${dish.name} - ${price.toFixed(2).replace(".", ",")} €
-                    <button onclick="removeFromCart(${dish.id})">➖</button>
-                    <button onclick="addToCart(${dish.id})">➕</button>
+                <div class="basketic">
+    
+                    <span id="dishAmount${i}">${dish.amount}x ${dish.name} - ${price.toFixed(2).replace(".", ",")} € </span>
+                  <div class="dish-amount-counter">
+                    <a onclick="removeFromCart(${dish.id})"><img src="${changeDeleteIcon()}"></a>
+                    ${dish.amount}<a onclick="addToCart(${dish.id})"><img src="./assets/icons/plus.svg"></a>   
+                  </div>
                 </div>
-                `;
+                
+
+      `;
+  }
+}
+
+function changeDeleteIcon(id) {
+  for (let i = 0; i < shoppingCart.length; i++) {
+    const dish = shoppingCart[i];
+    if (dish.amount == 1) {
+      return `./assets/icons/delete_icon_dark.svg`;
+    }
+    else if (dish.amount > 1) {
+      return `./assets/icons/minus.svg`;
+    }
   }
 }
 
