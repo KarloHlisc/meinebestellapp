@@ -116,7 +116,7 @@ let dishes = [
   },
   {
     "category": "Getränke",
-    "icon":"./assets/icons/salad_icon.svg",
+    "icon":"./assets/icons/soda-can-icon.svg",
     "menues": [
       {
         "id": 13,
