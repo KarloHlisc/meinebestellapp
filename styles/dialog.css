@@ -1,0 +1,42 @@
+#myDialog {
+    border-radius: 30px;
+    background-color: rgba(54, 53, 52, 1);
+    color: rgba(253, 234, 220, 1);
+    height: 300px;
+    width: 415px;
+    margin: auto;
+    border: 0;
+}
+
+#myDialog[open]::backdrop {
+    background-color: var(--card-color);
+    opacity: 0.5;
+}
+
+.delivery-dialog {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80px;
+}
+
+.delivery-dialog > h2,
+.delivery-dialog > p {
+    margin: 0;
+    padding: 0;
+}
+
+.delivery-dialog > h2 {
+    font-size: 42px;
+}
+
+.delivery-dialog > p {
+    font-size: 29px;
+}
+
+.myDialog-header {
+    display: flex;
+    justify-content: end;
+    padding: 32px 40px;
+}
