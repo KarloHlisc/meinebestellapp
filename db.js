@@ -136,7 +136,7 @@ let dishes = [
       },
       {
         "id": 15,
-        "name": "Adelholzener Classic 0,5l (MEHRWEG)",
+        "name": "Adelholzener Classic 0,5l",
         "description": "Mineralwasser mit Kohlensäure",
         "picture": "./assets/img/getranke/adelholzner.webp",
         "price": 3.55,
@@ -144,7 +144,7 @@ let dishes = [
       },
       {
         "id": 16,
-        "name": "fritz-kola® superzero 0,33l (MEHRWEG)",
+        "name": "fritz-kola® superzero 0,33l",
         "description": "Wenn Zero, dann SuperZero: Intensiver Fritz-Kola-Geschmack, volles Koffein, null Zucker",
         "picture": "./assets/img/getranke/fritz-cola.webp",
         "price": 2.75,
