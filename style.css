@@ -1,67 +1,49 @@
-/* palanquin-regular - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Palanquin';
   font-style: normal;
   font-weight: 400;
   src: url('./assets/fonts/palanquin-v17-latin-regular.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* palanquin-500 - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Palanquin';
   font-style: normal;
   font-weight: 500;
   src: url('./assets/fonts/palanquin-v17-latin-500.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* palanquin-600 - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Palanquin';
   font-style: normal;
   font-weight: 600;
   src: url('./assets/fonts/palanquin-v17-latin-600.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* palanquin-700 - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Palanquin';
   font-style: normal;
   font-weight: 700;
   src: url('./assets/fonts/palanquin-v17-latin-700.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* palanquin-dark-regular - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Palanquin Dark';
   font-style: normal;
   font-weight: 400;
   src: url('./assets/fonts/palanquin-dark-v17-latin-regular.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* palanquin-dark-700 - latin */
 @font-face {
   font-display: swap;
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Palanquin Dark';
   font-style: normal;
   font-weight: 700;
   src: url('./assets/fonts/palanquin-dark-v17-latin-700.woff2') format('woff2');
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 * {
@@ -82,12 +64,20 @@ html {
 }
 
 body {
-
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
   width: 100%;
   color: rgba(54, 53, 52, 1);
+}
+
+h1, h2, span, p, a{
+  margin: 0;
+  padding: 0;
+}
+
+.d-none {
+  display: none;
 }
 
 header {
@@ -105,8 +95,6 @@ header {
 }
 
 a {
-  font-size: 24px;
-  font-weight: 400;
   text-decoration: none;
   cursor: pointer;
 }
@@ -259,7 +247,6 @@ h1 span {
   justify-content: center;
   align-items: center;
   gap: 8px;
-
 }
 
 .add-item>a {
@@ -320,42 +307,53 @@ h1 span {
   background-color:  rgba(54, 53, 52, 1);
   }
 
-  #shopingCards h2{
-        color: rgba(253, 234, 220, 1);
-        font-size: 32px;
-        font-weight: 700;
-    margin: 30px 0;
-    
+#shopingCards h2{
+  color: rgba(253, 234, 220, 1);
+  font-size: 32px;
+  font-weight: 700;
+  margin: 30px 0;
   }
+
 #shoppingCartDesktop {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 8px;
   padding: 20px;
-
-  
-    overflow-y: auto;
-    overflow-x: hidden;
-    max-height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 350px;
 }
 
+.empty-basket{
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-basket p{
+  color: var(--card-color);
+  font-size: 24px;
+  text-align: center;
+}
+
+.empty-basket img{
+  height: 130px;
+}
 
 .total-price{
   margin-bottom: 30px;
 }
+
 #shoppingSum {
   font-size: 20px;
   font-weight: 600;
   padding: 20px;
   margin: 10px;
   color: white;
-  
   display: flex;
   flex-direction: column;
   justify-content: end;
 }
-
 
 .subtotal-price, .delivery-fee-price, .total-price{
   display: flex;
@@ -380,11 +378,9 @@ h1 span {
 
 .basket-price-final-count table{
   width: 100%;
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
-
-
 
 footer {
   display: flex;
@@ -412,10 +408,6 @@ footer a {
 footer a:hover {
   color: white;
   text-decoration: none;
-}
-
-.d-none {
-  display: none;
 }
 
 @media screen and (max-width: 768px) and (min-width:800px) {
