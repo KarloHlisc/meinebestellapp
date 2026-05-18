@@ -4,49 +4,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css" />
-
-  <script src="db.js"></script>
-  <script src="script.js"></script>
+  <title>Burger House</title>
+  <link rel="icon" type="image/x-icon" href="./assets/icons/fav-icon.png">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./styles/dialog.css">
+  <script src="./db.js"></script>
+  <script src="./script.js"></script>
 </head>
 
 <body onload="init()">
   <header>
-    <div class="header-section">
-      <img src="./assets/icons/logo_bestellapp.svg" alt="logo bestell app" />
-    </div>
-    <div>
-      <a href="#"><img src="./assets/icons/burger_menu.svg" alt="burger menu"></a>
+    <div class="header">
+      <div class="header-section">
+        <img src="./assets/icons/logo_bestellapp.svg" alt="logo bestell app" />
+      </div>
+      <div>
+        <a href="#"><img src="./assets/icons/burger_menu.svg" alt="burger menu"></a>
+      </div>
     </div>
   </header>
+
   <main>
     <section class="title-bestellapp">
       <div class="main-image">
-        <!--  <img src="" alt="Restoraunt main image" class="background-image" />-->
+        <div class="overley-image">
+          <img id="image-over-image" src="./assets/icons/burger_logo.svg" alt="logo">
+        </div>
       </div>
       <div class="restoraunt-title">
         <div class="title">
           <h1><span>Burger</span>House</h1> <img src="./assets/icons/frame_star.svg" alt="logo na slici"
             class="logo-onto-bg-image" />
         </div>
-        <div class="title-description"><span>The best of Burgers, Pizza, and Greens, all in one great place.</span></div>
+        <div class="title-description"><span>The best of Burgers, Pizza, and Greens, all in one great place.</span>
+        </div>
       </div>
 
     </section>
-    <section class="main-menu" id="main-menu"></section>
-    <section id="shopingCards">
-
-      <div id="shoppingCartDesktop"></div>
-      <div id="shoppingCartMobile" class="d-none"></div>
-      <div id="shoppingSum"></div>
-    </section>
+    <div class="body-content">
+      <section class="main-menu" id="main-menu"></section>
+      <section id="shopingCards">
+        <h2> Your Basket</h2>
+        <div id="shoppingCartDesktop"></div>
+        <div id="shoppingCartMobile" class="d-none"></div>
+        <div id="shoppingSum" class="d-none"></div>
+      </section>
+    </div>
+    
+    
   </main>
+  <div>
+  <dialog id="myDialog">
+      <div class="myDialog-header">
+                  <a id="closeDialog" onclick="closeDialog()">
+                      <img src="../assets/icons/close.svg" alt="">
+                  </a>
+      </div>
+      <div class="delivery-dialog">
+        
+        <img src="../assets/icons/logo_liferwagen.svg" alt="">
+        
+        <h2>Order confirmed!</h2>
+        <p>Your food is on the way!</p>
+        
+      </div>
+    </dialog>
+    </div>
   <footer>
     <div>
-      <span>Burger Laden footer</span>
+      <a href="#"><img src="./assets/icons/copyright.svg" alt="copyright"> 2025 BurgerHouse</a>
+      <a href="#">Imprint</a>
+      <a href="#">Cookie Preferences</a>
     </div>
   </footer>
+  <script src="./scripts/dialog.js"></script>
 </body>
 
 </html>
