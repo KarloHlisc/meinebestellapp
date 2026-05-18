@@ -2,6 +2,7 @@ let shoppingCart = [];
 
 function init() {
   renderCategoryDishes();
+  emptyBasket();
 }
 
 function renderCategoryDishes() {
@@ -131,7 +132,7 @@ function renderShoppingCartDesktop(id) {
                         <span> ${totalDelivery.toFixed(2).replace(".", ",")} €</b></span>
                   </div>
                   <div class="btn-buy">
-                    <a onclick=""> Buy now (${totalDelivery.toFixed(2).replace(".", ",")}€)</a>
+                    <a onclick="openDialog()"> Buy now (${totalDelivery.toFixed(2).replace(".", ",")}€)</a>
                   </div>
         </div>`;
 }
@@ -172,4 +173,37 @@ function changeDeleteIcon(id) {
 
 function deleteItemFromBasket(index) {
   shoppingCart.splice(index, 1);
+}
+
+
+function emptyBasket() {
+  const emptyBasket = document.getElementById("shoppingCartDesktop");
+  emptyBasket.innerHTML = "";
+
+  if (emptyBasket) {
+    emptyBasket.innerHTML = `
+            <div class="empty-basket">
+                <p>Nothing here yet.<br>Go ahead and choose something delicious!</p>
+                <img src="./assets/icons/basket-empty.svg" alt="empty basket">
+              </div>
+          `;
+  }
+}
+
+function deleteBasketItems(){
+  const deleteWholeBasket = document.getElementById("shoppingSum");
+  const deleteWholeBasketItems = document.getElementById("shoppingCartDesktop");
+  const deletePriceButton = document.getElementsByClassName("basket-price-final-count");
+  
+  if(deleteWholeBasket == 0){
+    deleteWholeBasket.classList.add("d-none");
+  }
+
+  deleteWholeBasket.innerHTML="";
+  deleteWholeBasketItems.innerHTML="";
+  deletePriceButton.innerHTML="";
+  shoppingCart= [];
+  deleteWholeBasket.classList.add('d-none');
+
+  renderShoppingCartDesktop();
 }
