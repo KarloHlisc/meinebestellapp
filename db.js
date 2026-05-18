@@ -144,7 +144,7 @@ let dishes = [
       },
       {
         "id": 16,
-        "name": "fritz-kola® superzero 0,33l",
+        "name": "fritz-kola superzero 0,33l",
         "description": "Wenn Zero, dann SuperZero: Intensiver Fritz-Kola-Geschmack, volles Koffein, null Zucker",
         "picture": "./assets/img/getranke/fritz-cola.webp",
         "price": 2.75,
