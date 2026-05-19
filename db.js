@@ -1,7 +1,7 @@
 let dishes = [
-  { 
+  {
     "category": "Pizza (30cm)",
-    "icon":"./assets/icons/pizza_icon.svg",
+    "icon": "./assets/icons/pizza_icon.svg",
     "menues": [
       {
         "id": 1,
@@ -11,7 +11,6 @@ let dishes = [
         "price": 11.90,
         "amount": 0
       },
-      
       {
         "id": 2,
         "name": "Chorizo",
@@ -40,7 +39,7 @@ let dishes = [
   },
   {
     "category": "Burger & Sandwiches",
-    "icon":"./assets/icons/burger_sandwich_icon.svg",
+    "icon": "./assets/icons/burger_sandwich_icon.svg",
     "menues": [
       {
         "id": 5,
@@ -78,7 +77,7 @@ let dishes = [
   },
   {
     "category": "Salad",
-    "icon":"./assets/icons/salad_icon.svg",
+    "icon": "./assets/icons/salad_icon.svg",
     "menues": [
       {
         "id": 9,
@@ -116,7 +115,7 @@ let dishes = [
   },
   {
     "category": "Getränke",
-    "icon":"./assets/icons/soda-can-icon.svg",
+    "icon": "./assets/icons/soda-can-icon.svg",
     "menues": [
       {
         "id": 13,
